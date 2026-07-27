@@ -1,43 +1,270 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
+
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>NHJ Portfolio</title>
 
 <style>
 
-body{
-    font-family:Arial;
+*{
     margin:0;
-    background:#f5f5f5;
+    padding:0;
+    box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f6f9;
+    color:#333;
+    line-height:1.8;
+}
+
+/* Hero */
+
 header{
-    background:#333;
+
+    background:linear-gradient(135deg,#20232a,#3d4b63);
+
     color:white;
-    padding:40px;
+
+    padding:100px 20px;
+
     text-align:center;
+
+}
+
+header h1{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+header p{
+
+    font-size:22px;
+
+    color:#ddd;
+
+}
+
+.button-group{
+
+    margin-top:35px;
+
+}
+
+.button-group a{
+
+    display:inline-block;
+
+    margin:10px;
+
+    padding:14px 28px;
+
+    background:#4b8cff;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.button-group a:hover{
+
+    background:#2b6cff;
+
+}
+
+/* Section */
+
+section{
+
+    max-width:1100px;
+
+    margin:40px auto;
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:40px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+section h2{
+
+    margin-bottom:25px;
+
+    color:#2b6cff;
+
+}
+
+/* Skill */
+
+.skills{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+.skills span{
+
+    background:#eef4ff;
+
+    color:#2b6cff;
+
+    padding:12px 20px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+}
+
+/* Project */
+
+.project{
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+}
+
+.project:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+}
+
+.project img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+.project-content{
+
+    padding:25px;
+
+}
+
+.project h3{
+
+    margin-bottom:15px;
+
+}
+
+.project ul{
+
+    margin:15px 0 20px 20px;
+
+}
+
+.project a{
+
+    display:inline-block;
+
+    background:#2b6cff;
+
+    color:white;
+
+    padding:10px 20px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+}
+
+.project a:hover{
+
+    background:#184fc8;
+
+}
+
+/* Contact */
+
+.contact{
+
+    text-align:center;
+
+}
+
+.contact p{
+
+    font-size:18px;
+
+}
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#666;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+header{
+
+    padding:70px 20px;
+
+}
+
+header h1{
+
+    font-size:38px;
+
+}
+
+header p{
+
+    font-size:18px;
+
 }
 
 section{
-    width:900px;
-    margin:auto;
-    margin-top:30px;
-    background:white;
-    padding:30px;
-    border-radius:10px;
+
+    margin:20px;
+
+    padding:25px;
+
 }
 
-.project{
-    border:1px solid #ddd;
-    padding:20px;
-    margin-top:20px;
-    border-radius:8px;
-}
-
-a{
-    color:#2b6cff;
-    text-decoration:none;
 }
 
 </style>
@@ -50,7 +277,15 @@ a{
 
 <h1>NHJ Portfolio</h1>
 
-<p>Unreal Engine 5 C++ Game Programmer</p>
+<p>Unreal Engine 5 Gameplay Programmer</p>
+
+<div class="button-group">
+
+<a href="https://github.com/NHJ1234-git" target="_blank">GitHub</a>
+
+<a href="mailto:randomreload9669@gmail.com">Email</a>
+
+</div>
 
 </header>
 
@@ -60,7 +295,9 @@ a{
 
 <p>
 
-UE5 블루프린트와 C++를 이용한 게임 개발을 공부하고 있습니다.
+UE5 블루프린트와 C++를 활용하여 게임 플레이 시스템을 개발하고 있습니다.
+게임의 핵심 기능을 직접 구현하고 문제를 해결하는 과정에 흥미를 느끼며,
+Gameplay Programmer를 목표로 공부하고 있습니다.
 
 </p>
 
@@ -68,17 +305,23 @@ UE5 블루프린트와 C++를 이용한 게임 개발을 공부하고 있습니�
 
 <section>
 
-<h2>기술</h2>
+<h2>기술 스택</h2>
 
-<ul>
+<div class="skills">
 
-<li>Unreal Engine 5</li>
+<span>Unreal Engine 5.4</span>
 
-<li>C++</li>
+<span>C++</span>
 
-<li>Blueprint</li>
+<span>Blueprint</span>
 
-</ul>
+<span>Git</span>
+
+<span>GitHub</span>
+
+<span>Visual Studio 2022</span>
+
+</div>
 
 </section>
 
@@ -88,49 +331,68 @@ UE5 블루프린트와 C++를 이용한 게임 개발을 공부하고 있습니�
 
 <div class="project">
 
+<!--
+프로젝트 이미지가 있다면 아래 주석을 해제하세요.
+
+<img src="images/jumprush.png" alt="JumpRush">
+-->
+
+<div class="project-content">
+
 <h3>JumpRush</h3>
 
 <p>
 
-UE5 C++로 제작 중인 액션 게임
+UE5 C++로 제작 중인 액션 게임입니다.
 
 </p>
 
 <ul>
 
-<li>Dash</li>
+<li>Dash 시스템</li>
 
-<li>Guard</li>
+<li>Guard 시스템</li>
 
-<li>Respawn</li>
+<li>Respawn 시스템</li>
 
-<li>UI</li>
+<li>Player UI</li>
 
 <li>GameMode</li>
 
+<li>Animation Notify</li>
+
+<li>Delegate 활용</li>
+
 </ul>
 
-<p>
-
-<a href="https://github.com/NHJ1234-git/JumpRush">
+<a href="https://github.com/NHJ1234-git/JumpRush" target="_blank">
 
 GitHub Repository
 
 </a>
 
-</p>
+</div>
 
 </div>
 
 </section>
 
-<section>
+<section class="contact">
 
 <h2>Contact</h2>
 
-<p>Email : randomreload9669@gmail.com</p>
+<p>📧 randomreload9669@gmail.com</p>
+
+<p>🐱 GitHub : NHJ1234-git</p>
 
 </section>
 
+<footer>
+
+© 2026 NHJ Portfolio
+
+</footer>
+
 </body>
+
 </html>
